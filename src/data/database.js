@@ -1,3 +1,30 @@
+// src/data/database.js
+
+const carImages = [
+  "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1000&q=85",
+];
+
+const partImages = [
+  "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1487754180451-c456f719a197?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1000&q=85",
+  "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=85",
+];
 
 export const companies = [
   {
@@ -5,40 +32,37 @@ export const companies = [
     name: "Toyota",
     country: "Japan",
     description: "Японский производитель автомобилей.",
-    image: "",
+    image: carImages[0],
   },
   {
     id: 2,
     name: "BMW",
     country: "Germany",
     description: "Немецкий производитель автомобилей.",
-    image: "",
+    image: carImages[1],
   },
   {
     id: 3,
     name: "Mercedes-Benz",
     country: "Germany",
     description: "Немецкий автомобильный бренд.",
-    image: "",
+    image: carImages[2],
   },
   {
     id: 4,
     name: "Chevrolet",
     country: "USA",
     description: "Американский автомобильный бренд.",
-    image: "",
+    image: carImages[3],
   },
   {
     id: 5,
     name: "Hyundai",
     country: "South Korea",
     description: "Южнокорейский производитель автомобилей.",
-    image: "",
+    image: carImages[4],
   },
 ];
-
-
-
 
 export const cars = [
   {
@@ -48,7 +72,7 @@ export const cars = [
     name: "Camry",
     year: 2021,
     engine: "2.5 бензин",
-    image: "",
+    image: carImages[0],
   },
   {
     id: 2,
@@ -57,7 +81,7 @@ export const cars = [
     name: "Corolla",
     year: 2022,
     engine: "1.8 бензин",
-    image: "",
+    image: carImages[1],
   },
   {
     id: 3,
@@ -66,7 +90,7 @@ export const cars = [
     name: "Land Cruiser",
     year: 2020,
     engine: "4.0 бензин",
-    image: "",
+    image: carImages[2],
   },
   {
     id: 4,
@@ -75,7 +99,7 @@ export const cars = [
     name: "RAV4",
     year: 2023,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[3],
   },
   {
     id: 5,
@@ -84,7 +108,7 @@ export const cars = [
     name: "Supra",
     year: 2022,
     engine: "3.0 бензин",
-    image: "",
+    image: carImages[4],
   },
   {
     id: 6,
@@ -93,7 +117,7 @@ export const cars = [
     name: "Yaris",
     year: 2021,
     engine: "1.5 бензин",
-    image: "",
+    image: carImages[5],
   },
   {
     id: 7,
@@ -102,7 +126,7 @@ export const cars = [
     name: "Highlander",
     year: 2022,
     engine: "3.5 бензин",
-    image: "",
+    image: carImages[6],
   },
   {
     id: 8,
@@ -111,7 +135,7 @@ export const cars = [
     name: "Prius",
     year: 2020,
     engine: "1.8 Hybrid",
-    image: "",
+    image: carImages[7],
   },
   {
     id: 9,
@@ -120,7 +144,7 @@ export const cars = [
     name: "Avalon",
     year: 2021,
     engine: "3.5 бензин",
-    image: "",
+    image: carImages[8],
   },
   {
     id: 10,
@@ -129,7 +153,7 @@ export const cars = [
     name: "C-HR",
     year: 2022,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[9],
   },
 
   {
@@ -139,7 +163,7 @@ export const cars = [
     name: "3 Series",
     year: 2021,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[0],
   },
   {
     id: 12,
@@ -148,7 +172,7 @@ export const cars = [
     name: "5 Series",
     year: 2022,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[1],
   },
   {
     id: 13,
@@ -157,7 +181,7 @@ export const cars = [
     name: "7 Series",
     year: 2021,
     engine: "3.0 бензин",
-    image: "",
+    image: carImages[2],
   },
   {
     id: 14,
@@ -166,7 +190,7 @@ export const cars = [
     name: "X3",
     year: 2022,
     engine: "2.0 дизель",
-    image: "",
+    image: carImages[3],
   },
   {
     id: 15,
@@ -175,7 +199,7 @@ export const cars = [
     name: "X5",
     year: 2023,
     engine: "3.0 дизель",
-    image: "",
+    image: carImages[4],
   },
   {
     id: 16,
@@ -184,7 +208,7 @@ export const cars = [
     name: "X6",
     year: 2022,
     engine: "3.0 бензин",
-    image: "",
+    image: carImages[5],
   },
   {
     id: 17,
@@ -193,7 +217,7 @@ export const cars = [
     name: "X7",
     year: 2023,
     engine: "3.0 бензин",
-    image: "",
+    image: carImages[6],
   },
   {
     id: 18,
@@ -202,7 +226,7 @@ export const cars = [
     name: "M3",
     year: 2022,
     engine: "3.0 бензин",
-    image: "",
+    image: carImages[7],
   },
   {
     id: 19,
@@ -211,7 +235,7 @@ export const cars = [
     name: "M4",
     year: 2022,
     engine: "3.0 бензин",
-    image: "",
+    image: carImages[8],
   },
   {
     id: 20,
@@ -220,7 +244,7 @@ export const cars = [
     name: "i4",
     year: 2023,
     engine: "Electric",
-    image: "",
+    image: carImages[9],
   },
 
   {
@@ -230,7 +254,7 @@ export const cars = [
     name: "C-Class",
     year: 2022,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[0],
   },
   {
     id: 22,
@@ -239,7 +263,7 @@ export const cars = [
     name: "E-Class",
     year: 2021,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[1],
   },
   {
     id: 23,
@@ -248,7 +272,7 @@ export const cars = [
     name: "S-Class",
     year: 2022,
     engine: "3.0 бензин",
-    image: "",
+    image: carImages[2],
   },
   {
     id: 24,
@@ -257,7 +281,7 @@ export const cars = [
     name: "A-Class",
     year: 2021,
     engine: "1.3 бензин",
-    image: "",
+    image: carImages[3],
   },
   {
     id: 25,
@@ -266,7 +290,7 @@ export const cars = [
     name: "GLC",
     year: 2022,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[4],
   },
   {
     id: 26,
@@ -275,7 +299,7 @@ export const cars = [
     name: "GLE",
     year: 2023,
     engine: "3.0 дизель",
-    image: "",
+    image: carImages[5],
   },
   {
     id: 27,
@@ -284,7 +308,7 @@ export const cars = [
     name: "GLS",
     year: 2022,
     engine: "3.0 бензин",
-    image: "",
+    image: carImages[6],
   },
   {
     id: 28,
@@ -293,7 +317,7 @@ export const cars = [
     name: "G-Class",
     year: 2021,
     engine: "4.0 бензин",
-    image: "",
+    image: carImages[7],
   },
   {
     id: 29,
@@ -302,7 +326,7 @@ export const cars = [
     name: "CLA",
     year: 2022,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[8],
   },
   {
     id: 30,
@@ -311,7 +335,7 @@ export const cars = [
     name: "EQS",
     year: 2023,
     engine: "Electric",
-    image: "",
+    image: carImages[9],
   },
 
   {
@@ -321,7 +345,7 @@ export const cars = [
     name: "Malibu",
     year: 2021,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[0],
   },
   {
     id: 32,
@@ -330,7 +354,7 @@ export const cars = [
     name: "Cruze",
     year: 2020,
     engine: "1.4 бензин",
-    image: "",
+    image: carImages[1],
   },
   {
     id: 33,
@@ -339,7 +363,7 @@ export const cars = [
     name: "Cobalt",
     year: 2022,
     engine: "1.5 бензин",
-    image: "",
+    image: carImages[2],
   },
   {
     id: 34,
@@ -348,7 +372,7 @@ export const cars = [
     name: "Nexia",
     year: 2020,
     engine: "1.5 бензин",
-    image: "",
+    image: carImages[3],
   },
   {
     id: 35,
@@ -357,7 +381,7 @@ export const cars = [
     name: "Equinox",
     year: 2022,
     engine: "1.5 бензин",
-    image: "",
+    image: carImages[4],
   },
   {
     id: 36,
@@ -366,7 +390,7 @@ export const cars = [
     name: "Tahoe",
     year: 2021,
     engine: "5.3 бензин",
-    image: "",
+    image: carImages[5],
   },
   {
     id: 37,
@@ -375,7 +399,7 @@ export const cars = [
     name: "Traverse",
     year: 2022,
     engine: "3.6 бензин",
-    image: "",
+    image: carImages[6],
   },
   {
     id: 38,
@@ -384,7 +408,7 @@ export const cars = [
     name: "Spark",
     year: 2020,
     engine: "1.2 бензин",
-    image: "",
+    image: carImages[7],
   },
   {
     id: 39,
@@ -393,7 +417,7 @@ export const cars = [
     name: "Tracker",
     year: 2023,
     engine: "1.2 бензин",
-    image: "",
+    image: carImages[8],
   },
   {
     id: 40,
@@ -402,7 +426,7 @@ export const cars = [
     name: "Camaro",
     year: 2021,
     engine: "6.2 бензин",
-    image: "",
+    image: carImages[9],
   },
 
   {
@@ -412,7 +436,7 @@ export const cars = [
     name: "Elantra",
     year: 2022,
     engine: "1.6 бензин",
-    image: "",
+    image: carImages[0],
   },
   {
     id: 42,
@@ -421,7 +445,7 @@ export const cars = [
     name: "Sonata",
     year: 2021,
     engine: "2.5 бензин",
-    image: "",
+    image: carImages[1],
   },
   {
     id: 43,
@@ -430,7 +454,7 @@ export const cars = [
     name: "Tucson",
     year: 2022,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[2],
   },
   {
     id: 44,
@@ -439,7 +463,7 @@ export const cars = [
     name: "Santa Fe",
     year: 2021,
     engine: "2.5 бензин",
-    image: "",
+    image: carImages[3],
   },
   {
     id: 45,
@@ -448,7 +472,7 @@ export const cars = [
     name: "Creta",
     year: 2022,
     engine: "1.6 бензин",
-    image: "",
+    image: carImages[4],
   },
   {
     id: 46,
@@ -457,7 +481,7 @@ export const cars = [
     name: "Accent",
     year: 2020,
     engine: "1.6 бензин",
-    image: "",
+    image: carImages[5],
   },
   {
     id: 47,
@@ -466,7 +490,7 @@ export const cars = [
     name: "Kona",
     year: 2022,
     engine: "2.0 бензин",
-    image: "",
+    image: carImages[6],
   },
   {
     id: 48,
@@ -475,7 +499,7 @@ export const cars = [
     name: "Palisade",
     year: 2023,
     engine: "3.8 бензин",
-    image: "",
+    image: carImages[7],
   },
   {
     id: 49,
@@ -484,7 +508,7 @@ export const cars = [
     name: "i30",
     year: 2021,
     engine: "1.5 бензин",
-    image: "",
+    image: carImages[8],
   },
   {
     id: 50,
@@ -493,57 +517,62 @@ export const cars = [
     name: "Staria",
     year: 2022,
     engine: "2.2 дизель",
-    image: "",
+    image: carImages[9],
   },
 ];
-
-
-
 
 const partTypes = [
   {
     name: "Передние тормозные колодки",
     category: "Тормозная система",
+    image: partImages[0],
   },
   {
     name: "Задние тормозные колодки",
     category: "Тормозная система",
+    image: partImages[1],
   },
   {
     name: "Тормозной диск",
     category: "Тормозная система",
+    image: partImages[2],
   },
   {
     name: "Масляный фильтр",
     category: "Фильтры",
+    image: partImages[3],
   },
   {
     name: "Воздушный фильтр",
     category: "Фильтры",
+    image: partImages[4],
   },
   {
     name: "Салонный фильтр",
     category: "Фильтры",
+    image: partImages[5],
   },
   {
     name: "Свечи зажигания",
     category: "Двигатель",
+    image: partImages[6],
   },
   {
     name: "Передний амортизатор",
     category: "Подвеска",
+    image: partImages[7],
   },
   {
     name: "Автомобильный аккумулятор",
     category: "Электрика",
+    image: partImages[8],
   },
   {
     name: "Лампа передней фары",
     category: "Электрика",
+    image: partImages[9],
   },
 ];
-
-
 
 const prices = [
   95000,
@@ -572,83 +601,70 @@ export const parts = cars.flatMap((car) => {
       id,
       carId: car.id,
       companyId: car.companyId,
-
       company: car.company,
       car: car.name,
-
       name: part.name,
       category: part.category,
-
       price: prices[(id - 1) % prices.length],
       currency: "UZS",
-
       rating: Number((4.5 + ((id * 7) % 5) / 10).toFixed(1)),
-
       stock: (id * 3) % 25 + 2,
-
       sku: `PG-${car.companyId}-${car.id}-${String(id).padStart(4, "0")}`,
-
-      image: "",
+      image: part.image,
     };
   });
 });
-
-
-
 
 export const categories = [
   {
     id: 1,
     name: "Двигатель",
     icon: "⚙️",
-    image: "",
+    image: partImages[6],
   },
   {
     id: 2,
     name: "Тормозная система",
     icon: "🛑",
-    image: "",
+    image: partImages[0],
   },
   {
     id: 3,
     name: "Фильтры",
     icon: "🔧",
-    image: "",
+    image: partImages[3],
   },
   {
     id: 4,
     name: "Подвеска",
     icon: "🔩",
-    image: "",
+    image: partImages[7],
   },
   {
     id: 5,
     name: "Электрика",
     icon: "⚡",
-    image: "",
+    image: partImages[8],
   },
   {
     id: 6,
     name: "Кузов",
     icon: "🚘",
-    image: "",
+    image: carImages[3],
   },
   {
     id: 7,
     name: "Трансмиссия",
     icon: "⚙️",
-    image: "",
+    image: carImages[5],
   },
   {
     id: 8,
     name: "Охлаждение",
     icon: "❄️",
-    image: "",
+    image: partImages[2],
   },
 ];
-
-
-
 
 export const shops = [
   {
@@ -659,7 +675,7 @@ export const shops = [
     phone: "+998 90 111 22 33",
     rating: 4.8,
     distance: "1.2 км",
-    image: "",
+    image: carImages[0],
   },
   {
     id: 2,
@@ -669,7 +685,7 @@ export const shops = [
     phone: "+998 91 222 33 44",
     rating: 4.7,
     distance: "2.4 км",
-    image: "",
+    image: carImages[1],
   },
   {
     id: 3,
@@ -679,7 +695,7 @@ export const shops = [
     phone: "+998 93 333 44 55",
     rating: 4.9,
     distance: "3.1 км",
-    image: "",
+    image: carImages[2],
   },
   {
     id: 4,
@@ -689,7 +705,7 @@ export const shops = [
     phone: "+998 94 444 55 66",
     rating: 4.6,
     distance: "4.7 км",
-    image: "",
+    image: carImages[3],
   },
   {
     id: 5,
@@ -699,12 +715,9 @@ export const shops = [
     phone: "+998 95 555 66 77",
     rating: 4.8,
     distance: "5.2 км",
-    image: "",
+    image: carImages[4],
   },
 ];
-
-
-
 
 export const reviews = [
   {
@@ -712,57 +725,52 @@ export const reviews = [
     name: "Алекс Каримов",
     rating: 5,
     text: "Очень удобный сервис. Нужную запчасть можно найти всего за несколько кликов.",
-    image: "",
+    image: carImages[0],
   },
   {
     id: 2,
     name: "Даниэль Мирзаев",
     rating: 5,
     text: "Мне понравилась идея поиска запчастей именно по модели автомобиля.",
-    image: "",
+    image: carImages[1],
   },
   {
     id: 3,
     name: "Саид Нуров",
     rating: 4,
     text: "Хорошая структура каталога и простой поиск.",
-    image: "",
+    image: carImages[2],
   },
   {
     id: 4,
     name: "Рустам Алиев",
     rating: 5,
     text: "Удобно смотреть товары и информацию о магазинах.",
-    image: "",
+    image: carImages[3],
   },
   {
     id: 5,
     name: "Максим Юсупов",
     rating: 5,
     text: "Особенно понравилась возможность выбрать сначала автомобиль.",
-    image: "",
+    image: carImages[4],
   },
   {
     id: 6,
     name: "Илья Сафин",
     rating: 4,
     text: "Интерфейс выглядит современно и понятно.",
-    image: "",
+    image: carImages[5],
   },
 ];
-
-
-
 
 export const demoUser = {
   id: 1,
   name: "Muhammad Ali",
   email: "demo@partgo.com",
   phone: "+998 90 123 45 67",
-  image: "",
+  image: carImages[0],
 };
-
-
 
 export const team = [
   {
@@ -771,7 +779,7 @@ export const team = [
     position: "Founder & Developer",
     phone: "+998 90 123 45 67",
     email: "founder@partgo.demo",
-    image: "",
+    image: carImages[0],
   },
   {
     id: 2,
@@ -779,7 +787,7 @@ export const team = [
     position: "Project Manager",
     phone: "+998 91 456 78 90",
     email: "manager@partgo.demo",
-    image: "",
+    image: carImages[1],
   },
   {
     id: 3,
@@ -787,6 +795,6 @@ export const team = [
     position: "Support Manager",
     phone: "+998 93 234 56 78",
     email: "support@partgo.demo",
-    image: "",
+    image: carImages[2],
   },
 ];

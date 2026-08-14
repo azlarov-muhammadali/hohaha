@@ -3,24 +3,27 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { CartProvider } from "./components/CartProvider";
+import { AccountProvider } from "./components/AccountProvider";
 
 export const metadata = {
   title: "PartGo — Автозапчасти",
-  description: "Магазин автозапчастей PartGo",
+  description: "PartGo — каталог автомобильных запчастей",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <body>
+      <body className="bg-gray-50 text-gray-900">
         <CartProvider>
-          <Navbar />
+          <AccountProvider>
+            <Navbar />
 
-          <main>
-            {children}
-          </main>
+            <main>
+              {children}
+            </main>
 
-          <Footer />
+            <Footer />
+          </AccountProvider>
         </CartProvider>
       </body>
     </html>
