@@ -16,9 +16,14 @@ import { useCart } from "../components/CartProvider";
 function ProductsContent() {
   const searchParams = useSearchParams();
 
-  const initialCategory = searchParams.get("category") || "";
-  const initialCompany = searchParams.get("company") || "";
-  const initialCar = searchParams.get("car") || "";
+  const initialCategory =
+    searchParams.get("category") || "";
+
+  const initialCompany =
+    searchParams.get("company") || "";
+
+  const initialCar =
+    searchParams.get("car") || "";
 
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] =
@@ -32,7 +37,6 @@ function ProductsContent() {
 
   const { addToCart, cart } = useCart();
 
-  // Фильтрация товаров
   const filteredParts = useMemo(() => {
     return parts.filter((part) => {
       const text = `
@@ -42,7 +46,9 @@ function ProductsContent() {
         ${part.category || ""}
       `.toLowerCase();
 
-      const searchMatch = text.includes(search.toLowerCase());
+      const searchMatch = text.includes(
+        search.toLowerCase()
+      );
 
       const categoryMatch =
         !selectedCategory ||
@@ -70,7 +76,6 @@ function ProductsContent() {
     selectedCar,
   ]);
 
-  // Добавление товара в корзину
   function handleAddToCart(part) {
     addToCart(part, 1);
   }
@@ -78,7 +83,6 @@ function ProductsContent() {
   return (
     <div className="min-h-screen bg-gray-50">
 
-      {/* HEADER CATALOG */}
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-14">
 
@@ -116,12 +120,13 @@ function ProductsContent() {
 
           </div>
 
-          {/* SEARCH */}
           <div className="mt-8">
 
             <input
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) =>
+                setSearch(e.target.value)
+              }
               placeholder="Например: Toyota Camry, тормозные колодки..."
               className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-6 py-5 text-base outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100"
             />
@@ -131,17 +136,12 @@ function ProductsContent() {
         </div>
       </section>
 
-
-      {/* CONTENT */}
       <section className="mx-auto max-w-7xl px-6 py-10">
 
         <div className="grid gap-8 lg:grid-cols-[250px_1fr]">
 
-
-          {/* SIDEBAR */}
           <aside className="space-y-6">
 
-            {/* CATEGORIES */}
             <div className="rounded-2xl border border-gray-200 bg-white p-5">
 
               <h2 className="font-bold">
@@ -151,7 +151,9 @@ function ProductsContent() {
               <div className="mt-4 space-y-2">
 
                 <button
-                  onClick={() => setSelectedCategory("")}
+                  onClick={() =>
+                    setSelectedCategory("")
+                  }
                   className={`w-full rounded-xl px-3 py-2.5 text-left text-sm ${
                     !selectedCategory
                       ? "bg-blue-600 text-white"
@@ -165,10 +167,13 @@ function ProductsContent() {
                   <button
                     key={category.id}
                     onClick={() =>
-                      setSelectedCategory(category.name)
+                      setSelectedCategory(
+                        category.name
+                      )
                     }
                     className={`w-full rounded-xl px-3 py-2.5 text-left text-sm ${
-                      selectedCategory === category.name
+                      selectedCategory ===
+                      category.name
                         ? "bg-blue-600 text-white"
                         : "hover:bg-gray-100"
                     }`}
@@ -181,8 +186,6 @@ function ProductsContent() {
 
             </div>
 
-
-            {/* COMPANIES */}
             <div className="rounded-2xl border border-gray-200 bg-white p-5">
 
               <h2 className="font-bold">
@@ -209,11 +212,14 @@ function ProductsContent() {
                   <button
                     key={company.id}
                     onClick={() => {
-                      setSelectedCompany(company.name);
+                      setSelectedCompany(
+                        company.name
+                      );
                       setSelectedCar("");
                     }}
                     className={`w-full rounded-xl px-3 py-2.5 text-left text-sm ${
-                      selectedCompany === company.name
+                      selectedCompany ===
+                      company.name
                         ? "bg-blue-600 text-white"
                         : "hover:bg-gray-100"
                     }`}
@@ -226,8 +232,6 @@ function ProductsContent() {
 
             </div>
 
-
-            {/* CARS */}
             {selectedCompany && (
               <div className="rounded-2xl border border-gray-200 bg-white p-5">
 
@@ -250,7 +254,8 @@ function ProductsContent() {
                   {cars
                     .filter(
                       (car) =>
-                        car.company === selectedCompany
+                        car.company ===
+                        selectedCompany
                     )
                     .map((car) => (
                       <option
@@ -268,28 +273,20 @@ function ProductsContent() {
 
           </aside>
 
-
-          {/* PRODUCTS */}
           <div>
 
-            <div className="mb-6 flex items-center justify-between">
+            <div className="mb-6">
 
-              <div>
+              <h2 className="text-2xl font-black">
+                Запчасти
+              </h2>
 
-                <h2 className="text-2xl font-black">
-                  Запчасти
-                </h2>
-
-                <p className="mt-1 text-sm text-gray-400">
-                  Найдено: {filteredParts.length}
-                </p>
-
-              </div>
+              <p className="mt-1 text-sm text-gray-400">
+                Найдено: {filteredParts.length}
+              </p>
 
             </div>
 
-
-            {/* EMPTY */}
             {filteredParts.length === 0 ? (
 
               <div className="rounded-3xl border border-gray-200 bg-white py-20 text-center">
@@ -310,7 +307,6 @@ function ProductsContent() {
 
             ) : (
 
-              /* PRODUCT GRID */
               <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
 
                 {filteredParts.map((part) => (
@@ -319,8 +315,6 @@ function ProductsContent() {
                     key={part.id}
                     className="group overflow-hidden rounded-3xl border border-gray-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
                   >
-
-                    {/* IMAGE */}
 
                     <Link
                       href={`/products?part=${part.id}`}
@@ -331,18 +325,24 @@ function ProductsContent() {
                       typeof part.image === "string" &&
                       part.image.trim() !== "" ? (
 
-                        <img
-                          src={part.image}
-                          alt={part.name || "Автозапчасть"}
-                          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                        />
+                      <img
+  src={
+    part.image
+      ? part.image.startsWith("/")
+        ? part.image
+        : `/cars/parts/${part.image}`
+      : "/placeholder.png"
+  }
+  alt={part.name}
+  className="w-full h-full object-contain"
+/>
 
                       ) : (
 
                         <div className="flex h-full w-full flex-col items-center justify-center bg-gray-100 text-gray-400">
 
                           <span className="text-5xl">
-                            🚗
+                            🔧
                           </span>
 
                           <span className="mt-2 text-sm">
@@ -355,9 +355,7 @@ function ProductsContent() {
 
                     </Link>
 
-
                     {/* INFO */}
-
                     <div className="p-5">
 
                       <p className="text-xs font-bold uppercase tracking-wider text-blue-600">
@@ -376,9 +374,7 @@ function ProductsContent() {
                         {part.category}
                       </p>
 
-
                       {/* PRICE */}
-
                       <div className="mt-5">
 
                         <p className="text-xl font-black">
@@ -399,15 +395,14 @@ function ProductsContent() {
 
                           {" · "}
 
-                          В наличии: {part.stock ?? 0}
+                          В наличии:{" "}
+                          {part.stock ?? 0}
 
                         </p>
 
                       </div>
 
-
-                      {/* ADD TO CART */}
-
+                      {/* CART */}
                       <button
                         type="button"
                         onClick={() =>
@@ -438,13 +433,8 @@ function ProductsContent() {
   );
 }
 
-
-/* PAGE */
-
 export default function ProductsPage() {
-
   return (
-
     <Suspense
       fallback={
         <div className="flex min-h-screen items-center justify-center">
@@ -454,10 +444,7 @@ export default function ProductsPage() {
         </div>
       }
     >
-
       <ProductsContent />
-
     </Suspense>
-
   );
 }
